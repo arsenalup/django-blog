@@ -1,0 +1,28 @@
+{% extends './base.html' %}
+
+{% block body %}
+    <div class="container">
+        <div data-aos="fade-up">
+            <h3>About Skyfade</h3>
+            <div class="about">
+                <p>Oh hey, I'm surenck, liking reading, writing, music and  programming.</p>
+                <p>I love Python(I won't say Python is the best programming language, But it's my favorite:)). I'd like to post some technical articles and sum-up in this site</p>
+            </div>
+            <h3>Contact</h3>
+            <div class="about">
+                <p>Have more questions? you can send email to me</p>
+                <p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;<a href="mailto:{{ email }}">676250063@qq.com</a></p>
+            </div>
+
+            <h3>Else Where</h3>
+            <div class="about">
+                <p><i class="fa fa-github-square fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<a href="{{ github }}" target="_blank">https://github.com/arsenalup</a></p>
+            </div>
+            <h3>About The Site</h3>
+            <div class="about">
+                <P>This site is powered by Django. It open source and hosted at <a href="https://github.com/arsenalup">Github</a></P>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

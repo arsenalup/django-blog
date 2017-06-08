@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static 'blog/images/icon.png' %}">
+
+    <!-- CSS reset -->
+    <link rel="stylesheet" href="{% static 'blog/css/reset.css' %}">
+
+    <!-- Bootstrap core CSS -->
+    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="//cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
+    <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/demo.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+
+    <!-- Custom styles for thispy  template -->
+    <link href="{% static 'blog/css/blog.css' %}" rel="stylesheet">
+    <!-- Resource style -->
+    <script src="{% static 'blog/js/modernizr.js' %}"></script>
+    <!-- Modernizr -->
+
+    <title>Sky fade</title>
+
+</head>
+<body>
+{% include './secs/nav.html' %}
+
+<main class="cd-main-content main-content">
+    <div class="container">
+        {% block body %}{% endblock %}
+    </div>
+</main>
+{% include './secs/search.html' %}
+{% include './secs/footer.html' %}
+
+<!-- Bootstrap core JavaScript
+   ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+<!-- cover main content when search form is open -->
+<script src="{% static 'blog/js/main.js' %}"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{% extends './base.html' %}
+{% load static %}
+{% block body %}
+    <div  class="row">
+        <div  class="col-md-9">
+            {% block subject %}{% endblock %}
+            {% include './secs/articles.html' %}
+            {% include './secs/pagination.html' %}
+        </div>
+        <div data-aos="fade-left"  class="col-md-3 blog-sidebar visible-lg">
+            {% include './secs/sidebar.html' %}
+        </div><!-- /.blog-sidebar -->
+    </div>
+{% endblock %}
