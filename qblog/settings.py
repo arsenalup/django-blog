@@ -26,7 +26,7 @@ SECRET_KEY = 'ahy=yj#2-hiroy8io*0*dy)p&5kedc8bq85pb&gcg#+#3r%ae='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', '.skyfade.com','139.224.112.37']
 
 # Application definition
 
