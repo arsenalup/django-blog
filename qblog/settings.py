@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ahy=yj#2-hiroy8io*0*dy)p&5kedc8bq85pb&gcg#+#3r%ae='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', '.skyfade.com','139.224.112.37']
 
@@ -61,7 +61,7 @@ ROOT_URLCONF = 'qblog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,14 +122,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
 # grappelli setting
 
 GRAPPELLI_ADMIN_TITLE = "Rhys' Blog"
 
 # ckeditor configuration
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 CKEDITOR_CONFIGS = {
     "awesome_ckeditor": {
         'toolbar': 'full',
@@ -139,7 +141,7 @@ MEDIA_URL = "/uploads/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "uploads")
 CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_IMAGE_BACKEND = 'pillow'
-CKEDITOR_JQUERY_URL = 'blog/js/jquery.min.js'
+CKEDITOR_JQUERY_URL = 'static/blog/js/jquery.min.js'
 
 CKEDITOR_CONFIGS = {
     'default': {

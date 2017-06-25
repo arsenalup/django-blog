@@ -1,6 +1,5 @@
-{% load static %}
-
 <!DOCTYPE html>
+{% load static  %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -24,7 +23,7 @@
     <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
 
     <!-- Custom styles for thispy  template -->
-    <link href="{% static 'blog/css/blog.css' %}" rel="stylesheet">
+    <link  rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
     <!-- Resource style -->
     <script src="{% static 'blog/js/modernizr.js' %}"></script>
     <!-- Modernizr -->
@@ -33,15 +32,15 @@
 
 </head>
 <body>
-{% include './secs/nav.html' %}
+{% include 'blog/secs/nav.html' %}
 
 <main class="cd-main-content main-content">
     <div class="container">
         {% block body %}{% endblock %}
     </div>
 </main>
-{% include './secs/search.html' %}
-{% include './secs/footer.html' %}
+{% include 'blog/secs/search.html' %}
+{% include 'blog/secs/footer.html' %}
 
 <!-- Bootstrap core JavaScript
    ================================================== -->

@@ -1,10 +1,10 @@
-{% extends './base.html' %}
-
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
 
 {% block body %}
-    {% load static %}
 
-    <script src="{% static "blog/js/jquery.min.js" %}"></script>
+
+    <script src="{% static 'blog/js/jquery.min.js' %}"></script>
 
     <link href="{% static 'blog/css/lightbox.min.css'%}" rel='stylesheet'>
     <script src="{% static 'blog/js/lightbox.min.js' %}"></script>
